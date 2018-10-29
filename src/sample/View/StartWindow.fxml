@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="450.0" stylesheets="@../style/styleStart.css"
+            xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="sample.Controller.ControllerStartWindow">
+    <ImageView fitHeight="188.0" fitWidth="299.0" layoutX="88.0" pickOnBounds="true" preserveRatio="true">
+        <Image url="@../resources/logo.png"/>
+    </ImageView>
+    <Button id="firstProject" layoutX="125.0" layoutY="207.0" mnemonicParsing="false"
+            onMouseClicked="#firstProjectAction" prefHeight="50.0" prefWidth="200.0" text="Pierwszy projekt"/>
+    <Button id="secondProject" layoutX="125.0" layoutY="273.0" mnemonicParsing="false"
+            onMouseClicked="#secondProjectAction" prefHeight="50.0" prefWidth="200.0" text="Drugi projekt"/>
+    <Label layoutX="328.0" layoutY="353.0" prefHeight="47.0" prefWidth="122.0" text="Witalis Kinasz nr 269009"
+           textAlignment="RIGHT" wrapText="true"/>
+</AnchorPane>

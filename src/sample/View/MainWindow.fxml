@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane alignment="center" hgap="10" stylesheets="@../style/style.css" vgap="10"
+          xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1"
+          fx:controller="sample.Controller.ControllerMainWindow">
+    <SplitPane dividerPositions="0.75" orientation="VERTICAL" prefHeight="610.0" prefWidth="560.0">
+        <StackPane id="mainPane" fx:id="mainPane"/>
+
+        <StackPane id="ButtonPane">
+            <SplitPane dividerPositions="0.42">
+                <StackPane>
+                    <SplitPane dividerPositions="0.66">
+                        <StackPane id="movePane" styleClass="moveBackground">
+                            <padding>
+                                <Insets bottom="10" left="25" right="25" top="10"/>
+                            </padding>
+                            <Button id="moveLeft" mnemonicParsing="false" styleClass="leftButton"
+                                    StackPane.alignment="CENTER_LEFT" onMouseClicked="#moveLeftAction"/>
+                            <Button id="moveRight" mnemonicParsing="false" styleClass="rightButton"
+                                    StackPane.alignment="CENTER_RIGHT" onMouseClicked="#moveRightAction"/>
+                            <Button id="moveForward" mnemonicParsing="false" styleClass="upButton"
+                                    StackPane.alignment="TOP_CENTER" onMouseClicked="#moveForwardAction"/>
+                            <Button id="moveBackward" mnemonicParsing="false" styleClass="downButton"
+                                    StackPane.alignment="BOTTOM_CENTER" onMouseClicked="#moveBackwardAction"/>
+                        </StackPane>
+                        <StackPane styleClass="root">
+                            <padding>
+                                <Insets bottom="20" left="5" right="5" top="20"/>
+                            </padding>
+                            <Button id="moveUpstairs" mnemonicParsing="false" styleClass="upstairsButton"
+                                    StackPane.alignment="TOP_CENTER" onMouseClicked="#moveUpstairsAction"/>
+                            <Button id="moveDownstairs" mnemonicParsing="false" styleClass="downstairsButton"
+                                    StackPane.alignment="BOTTOM_CENTER" onMouseClicked="#moveDownstairsClicked"/>
+                        </StackPane>
+                    </SplitPane>
+                </StackPane>
+                <StackPane>
+                    <SplitPane dividerPositions="0.5">
+                        <StackPane styleClass="rotateBackground">
+                            <padding>
+                                <Insets bottom="10" left="25" right="25" top="10"/>
+                            </padding>
+                            <Button id="rotateLeft" mnemonicParsing="false" styleClass="leftButton"
+                                    StackPane.alignment="CENTER_LEFT" onMouseClicked="#rotateLeftAction"/>
+                            <Button id="rotateRight" mnemonicParsing="false" styleClass="rightButton"
+                                    StackPane.alignment="CENTER_RIGHT" onMouseClicked="#rotateRightAction"/>
+                            <Button id="rotateUp" mnemonicParsing="false" styleClass="upButton"
+                                    StackPane.alignment="TOP_CENTER" onMouseClicked="#rotateUpAction"/>
+                            <Button id="rotateDown" mnemonicParsing="false" styleClass="downButton"
+                                    StackPane.alignment="BOTTOM_CENTER" onMouseClicked="#rotateDownAction"/>
+                        </StackPane>
+                        <StackPane styleClass="root">
+                            <SplitPane dividerPositions="0.4">
+                                <StackPane styleClass="root">
+                                    <padding>
+                                        <Insets bottom="20" left="10" right="10" top="20"/>
+                                    </padding>
+                                    <Button id="tiltLeft" mnemonicParsing="false" styleClass="tiltLeft"
+                                            StackPane.alignment="TOP_CENTER" onMouseClicked="#tiltLeftAction"/>
+                                    <Button id="tiltRight" mnemonicParsing="false" styleClass="tiltRight"
+                                            StackPane.alignment="BOTTOM_CENTER" onMouseClicked="#tiltRightAction"/>
+
+                                </StackPane>
+                                <StackPane styleClass="root">
+                                    <padding>
+                                        <Insets bottom="20" left="10" right="10" top="20"/>
+                                    </padding>
+                                    <Button id="zoomIn" mnemonicParsing="false" styleClass="zoomInButton"
+                                            StackPane.alignment="TOP_CENTER" onMouseClicked="#zoomInAction"/>
+                                    <Button id="zoomOut" mnemonicParsing="false" styleClass="zoomOutButton"
+                                            StackPane.alignment="BOTTOM_CENTER" onMouseClicked="#zoomOutAction"/>
+                                </StackPane>
+                            </SplitPane>
+                        </StackPane>
+                    </SplitPane>
+                </StackPane>
+            </SplitPane>
+        </StackPane>
+    </SplitPane>
+</GridPane>
