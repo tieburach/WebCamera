@@ -14,14 +14,14 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class WebCamera {
+public class VirtualCamera {
     private CameraPainter cameraPainter;
     private Buildings buildings;
     private List<Wall2D> walls;
     private int focalLength = 200;
     private Movement movement;
 
-    WebCamera(CameraPainter cameraPainter) throws IOException{
+    VirtualCamera(CameraPainter cameraPainter) throws IOException{
         this.cameraPainter = cameraPainter;
         buildings = new Buildings();
         int divideWalls = 1;

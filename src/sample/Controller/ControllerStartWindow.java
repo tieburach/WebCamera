@@ -27,7 +27,7 @@ public class ControllerStartWindow {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        stage.setTitle("WebCameraApp");
+        stage.setTitle("VirtualCameraApp");
         assert root != null;
         stage.setScene(new Scene(root, 560, 610));
         stage.show();

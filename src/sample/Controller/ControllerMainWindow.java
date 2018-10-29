@@ -10,7 +10,7 @@ import java.io.IOException;
 public class ControllerMainWindow {
 
     public StackPane mainPane;
-    private WebCamera camera;
+    private VirtualCamera camera;
 
     public void initialize() throws IOException {
         SwingNode swingNode = new SwingNode();

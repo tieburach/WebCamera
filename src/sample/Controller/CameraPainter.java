@@ -11,16 +11,16 @@ import java.io.IOException;
 public class CameraPainter extends JPanel{
     private int width;
     private int height;
-    private WebCamera webCamera;
+    private VirtualCamera virtualCamera;
 
     CameraPainter() throws IOException{
         width = 560;
         height = 450;
-        webCamera = new WebCamera(this);
+        virtualCamera = new VirtualCamera(this);
     }
 
-    WebCamera getCamera(){
-        return webCamera;
+    VirtualCamera getCamera(){
+        return virtualCamera;
     }
 
     public int getWidth(){
@@ -35,7 +35,7 @@ public class CameraPainter extends JPanel{
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
         Graphics2D g2D = (Graphics2D) g;
-        for (Wall2D wall: webCamera.getWalls()){
+        for (Wall2D wall: virtualCamera.getWalls()){
             if (LaunchType.isFirstProject()){
                 g2D.setColor(Color.gray);
 

@@ -1,18 +1,18 @@
 package sample.Model.Logic;
 
-import sample.Controller.WebCamera;
+import sample.Controller.VirtualCamera;
 import sample.Model.ThreeDimensions.Point3D;
 import sample.Model.ThreeDimensions.Wall3D;
 
 public class Movement {
     private Buildings scene;
-    private WebCamera camera;
+    private VirtualCamera camera;
     private int focalLength;
     private static final int STEP = 50;
     private static final int ZOOM = 5;
     private static final double DEGREE = Math.PI * 10 / 180;
 
-    public Movement(WebCamera camera, Buildings scene, int d) {
+    public Movement(VirtualCamera camera, Buildings scene, int d) {
         this.camera = camera;
         this.scene = scene;
         this.focalLength = d;
