@@ -4,7 +4,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import sample.Model.Logic.LaunchType;
+import sample.VirtualCamera.Model.Logic.LaunchType;
 
 import java.io.IOException;
 
@@ -23,13 +23,27 @@ public class ControllerStartWindow {
         Stage stage = new Stage();
         Parent root = null;
         try {
-            root = FXMLLoader.load(getClass().getResource("../View/MainWindow.fxml"));
+            root = FXMLLoader.load(getClass().getResource("../VirtualCamera/View/MainWindow.fxml"));
         } catch (IOException e) {
             e.printStackTrace();
         }
         stage.setTitle("VirtualCameraApp");
         assert root != null;
         stage.setScene(new Scene(root, 560, 610));
+        stage.show();
+    }
+
+    public void thirdProjectAction() {
+        Stage stage = new Stage();
+        Parent root = null;
+        try {
+            root = FXMLLoader.load(getClass().getResource("../LightModel/View/LightView.fxml"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        stage.setTitle("VirtualCameraApp");
+        assert root != null;
+        stage.setScene(new Scene(root, 600 , 700));
         stage.show();
     }
 }

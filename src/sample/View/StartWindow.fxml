@@ -16,6 +16,8 @@
             onMouseClicked="#firstProjectAction" prefHeight="50.0" prefWidth="200.0" text="Pierwszy projekt"/>
     <Button id="secondProject" layoutX="125.0" layoutY="273.0" mnemonicParsing="false"
             onMouseClicked="#secondProjectAction" prefHeight="50.0" prefWidth="200.0" text="Drugi projekt"/>
+    <Button id="thirdProject" layoutX="125.0" layoutY="333.0" mnemonicParsing="false"
+            onMouseClicked="#thirdProjectAction" prefHeight="50.0" prefWidth="200.0" text="Trzeci projekt"/>
     <Label layoutX="328.0" layoutY="353.0" prefHeight="47.0" prefWidth="122.0" text="Witalis Kinasz nr 269009"
            textAlignment="RIGHT" wrapText="true"/>
 </AnchorPane>

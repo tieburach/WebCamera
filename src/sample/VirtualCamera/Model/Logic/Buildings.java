@@ -1,7 +1,7 @@
-package sample.Model.Logic;
+package sample.VirtualCamera.Model.Logic;
 
-import sample.Model.ThreeDimensions.Point3D;
-import sample.Model.ThreeDimensions.Wall3D;
+import sample.VirtualCamera.Model.ThreeDimensions.Point3D;
+import sample.VirtualCamera.Model.ThreeDimensions.Wall3D;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

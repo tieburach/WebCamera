@@ -1,13 +1,13 @@
-package sample.Controller;
+package sample.VirtualCamera.Controller;
 
-import sample.Model.ThreeDimensions.Line3D;
-import sample.Model.ThreeDimensions.Point3D;
-import sample.Model.ThreeDimensions.Wall3D;
-import sample.Model.Logic.Buildings;
-import sample.Model.Logic.Movement;
-import sample.Model.TwoDimensions.Line2D;
-import sample.Model.TwoDimensions.Point2D;
-import sample.Model.TwoDimensions.Wall2D;
+import sample.VirtualCamera.Model.ThreeDimensions.Line3D;
+import sample.VirtualCamera.Model.ThreeDimensions.Point3D;
+import sample.VirtualCamera.Model.ThreeDimensions.Wall3D;
+import sample.VirtualCamera.Model.Logic.Buildings;
+import sample.VirtualCamera.Model.Logic.Movement;
+import sample.VirtualCamera.Model.TwoDimensions.Line2D;
+import sample.VirtualCamera.Model.TwoDimensions.Point2D;
+import sample.VirtualCamera.Model.TwoDimensions.Wall2D;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -24,7 +24,7 @@ public class VirtualCamera {
     VirtualCamera(CameraPainter cameraPainter) throws IOException{
         this.cameraPainter = cameraPainter;
         buildings = new Buildings();
-        int divideWalls = 1;
+        int divideWalls = 4;
         buildings.divideWalls(divideWalls);
         walls = new ArrayList<>();
         movement = new Movement(this, buildings, focalLength);

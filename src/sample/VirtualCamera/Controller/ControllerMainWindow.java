@@ -1,4 +1,4 @@
-package sample.Controller;
+package sample.VirtualCamera.Controller;
 
 import javafx.embed.swing.SwingNode;
 import javafx.scene.layout.StackPane;

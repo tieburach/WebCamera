@@ -1,4 +1,4 @@
-package sample.Model.TwoDimensions;
+package sample.VirtualCamera.Model.TwoDimensions;
 
 public class Line2D {
     private Point2D firstPoint, secondPoint;

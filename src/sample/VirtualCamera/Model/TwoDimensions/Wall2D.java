@@ -1,4 +1,4 @@
-package sample.Model.TwoDimensions;
+package sample.VirtualCamera.Model.TwoDimensions;
 
 import java.util.ArrayList;
 import java.util.List;

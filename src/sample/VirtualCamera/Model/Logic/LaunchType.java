@@ -1,4 +1,4 @@
-package sample.Model.Logic;
+package sample.VirtualCamera.Model.Logic;
 
 public class LaunchType {
     private static boolean firstProject;

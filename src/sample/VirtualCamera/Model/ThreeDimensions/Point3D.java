@@ -1,4 +1,4 @@
-package sample.Model.ThreeDimensions;
+package sample.VirtualCamera.Model.ThreeDimensions;
 
 public class Point3D {
 

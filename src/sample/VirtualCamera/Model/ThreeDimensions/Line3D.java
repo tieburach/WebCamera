@@ -1,4 +1,4 @@
-package sample.Model.ThreeDimensions;
+package sample.VirtualCamera.Model.ThreeDimensions;
 
 public class Line3D {
     private Point3D firstPoint;

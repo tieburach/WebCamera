@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<AnchorPane prefWidth="600" styleClass="root" stylesheets="@lightStyles.css" xmlns="http://javafx.com/javafx/8.0.121"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.LightModel.Controller.LightController">
+    <SplitPane dividerPositions="0.75" layoutX="166.0" layoutY="58.0" orientation="VERTICAL" styleClass="root"
+               AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+               AnchorPane.topAnchor="0.0">
+        <StackPane fx:id="figureScene" maxHeight="400" maxWidth="400.0" minHeight="400.0"
+                   minWidth="400.0" prefHeight="400.0" prefWidth="400.0"/>
+        <StackPane>
+            <SplitPane dividerPositions="0.2" prefHeight="160.0" prefWidth="200.0" styleClass="root">
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                    <GridPane prefHeight="122.0" prefWidth="97.0" AnchorPane.bottomAnchor="0.0"
+                              AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                              AnchorPane.topAnchor="0.0">
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        </rowConstraints>
+                        <Label GridPane.halignment="CENTER" GridPane.rowIndex="0">Powierzchnia:
+                        </Label>
+                        <RadioButton fx:id="matowaRadioButton" onAction="#loadMatowaSphere"
+                                     GridPane.halignment="LEFT" GridPane.rowIndex="1">Matowa
+                        </RadioButton>
+                        <RadioButton fx:id="mieszanaRadioButton" onAction="#loadMieszanaSphere"
+                                     GridPane.halignment="LEFT" GridPane.rowIndex="2">Mieszana
+                        </RadioButton>
+                        <RadioButton fx:id="blyszczacaRadioButton" onAction="#loadBlyszczacaSphere"
+                                     GridPane.halignment="LEFT" GridPane.rowIndex="3">Blyszczaca
+                        </RadioButton>
+                    </GridPane>
+                </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                    <SplitPane dividerPositions="0.3" prefHeight="122.0" prefWidth="351.0"
+                               AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                               AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0"
+                                    prefWidth="100.0" styleClass="root">
+                            <GridPane layoutX="18.0" layoutY="15.0" prefHeight="120.0"
+                                      prefWidth="232.0" style="-fx-background-color: white;"
+                                      AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                                      AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0"
+                                                       prefWidth="100.0"/>
+                                </columnConstraints>
+                                <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0"
+                                                    vgrow="SOMETIMES"/>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0"
+                                                    vgrow="SOMETIMES"/>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0"
+                                                    vgrow="SOMETIMES"/>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0"
+                                                    vgrow="SOMETIMES"/>
+                                </rowConstraints>
+                                <Label GridPane.halignment="CENTER" GridPane.rowIndex="0">
+                                    Źródło światła:
+                                </Label>
+
+                                <Label textAlignment="RIGHT" GridPane.halignment="LEFT"
+                                       GridPane.rowIndex="1">X:
+                                </Label>
+                                <Spinner maxWidth="80" onMouseClicked="#changeCoordinates"
+                                         GridPane.halignment="CENTER" GridPane.rowIndex="1"
+                                         fx:id="xSpinner">
+                                    <valueFactory>
+                                        <SpinnerValueFactory.DoubleSpinnerValueFactory
+                                                amountToStepBy="1" initialValue="-3" max="10"
+                                                min="-10"/>
+                                    </valueFactory>
+                                </Spinner>
+                                <Label GridPane.halignment="LEFT" GridPane.rowIndex="2">Y:
+                                </Label>
+                                <Spinner fx:id="ySpinner" maxWidth="80"
+                                         onMouseClicked="#changeCoordinates"
+                                         GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                                    <valueFactory>
+                                        <SpinnerValueFactory.DoubleSpinnerValueFactory
+                                                amountToStepBy="1" initialValue="3" max="10"
+                                                min="-10"/>
+                                    </valueFactory>
+                                </Spinner>
+                                <Label GridPane.rowIndex="3">Z:</Label>
+                                <Spinner fx:id="zSpinner" maxWidth="80"
+                                         onMouseClicked="#changeCoordinates"
+                                         GridPane.halignment="CENTER" GridPane.rowIndex="3">
+                                    <valueFactory>
+                                        <SpinnerValueFactory.DoubleSpinnerValueFactory
+                                                amountToStepBy="1" initialValue="-7" max="10"
+                                                min="-10"/>
+                                    </valueFactory>
+                                </Spinner>
+                            </GridPane>
+                        </AnchorPane>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0"
+                                    prefWidth="100.0" styleClass="root">
+                            <GridPane layoutX="76.0" layoutY="38.0" prefHeight="166.0"
+                                      prefWidth="326.0" AnchorPane.bottomAnchor="0.0"
+                                      AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                                      AnchorPane.topAnchor="0.0">
+                                <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0"
+                                                       prefWidth="100.0"/>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0"
+                                                       prefWidth="100.0"/>
+                                </columnConstraints>
+                                <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0"
+                                                    vgrow="SOMETIMES"/>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0"
+                                                    vgrow="SOMETIMES"/>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0"
+                                                    vgrow="SOMETIMES"/>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0"
+                                                    vgrow="SOMETIMES"/>
+                                </rowConstraints>
+                                <Label GridPane.columnIndex="0" GridPane.halignment="RIGHT"
+                                       GridPane.rowIndex="0">Parametry dokładne
+                                </Label>
+                                <Label GridPane.columnIndex="0" GridPane.halignment="LEFT"
+                                       GridPane.rowIndex="1">IZwierciadlo
+                                </Label>
+                                <TextField fx:id="IAmbientTextField" maxWidth="60"
+                                           GridPane.columnIndex="0" GridPane.halignment="RIGHT"
+                                           GridPane.rowIndex="1">
+                                    <GridPane.margin>
+                                        <Insets right="10.0"/>
+                                    </GridPane.margin>
+                                </TextField>
+                                <Label GridPane.columnIndex="1" GridPane.halignment="LEFT"
+                                       GridPane.rowIndex="1">KappaA
+                                </Label>
+                                <TextField fx:id="kappaATextField" maxWidth="60"
+                                           GridPane.columnIndex="1" GridPane.halignment="RIGHT"
+                                           GridPane.rowIndex="1"/>
+                                <Label GridPane.columnIndex="0" GridPane.halignment="LEFT"
+                                       GridPane.rowIndex="2">IPadajace
+                                </Label>
+                                <TextField fx:id="IhittingTextField" maxWidth="60"
+                                           GridPane.columnIndex="0" GridPane.halignment="RIGHT"
+                                           GridPane.rowIndex="2">
+                                    <GridPane.margin>
+                                        <Insets right="10.0"/>
+                                    </GridPane.margin>
+                                </TextField>
+                                <Label GridPane.columnIndex="1" GridPane.halignment="LEFT"
+                                       GridPane.rowIndex="2">KappaS
+                                </Label>
+                                <TextField fx:id="kappaSTextField" maxWidth="60"
+                                           GridPane.columnIndex="1" GridPane.halignment="RIGHT"
+                                           GridPane.rowIndex="2"/>
+                                <Label GridPane.columnIndex="0" GridPane.halignment="LEFT"
+                                       GridPane.rowIndex="3">Shineness
+                                </Label>
+                                <TextField fx:id="shinenessTextField" maxWidth="60"
+                                           GridPane.columnIndex="0" GridPane.halignment="RIGHT"
+                                           GridPane.rowIndex="3">
+                                    <GridPane.margin>
+                                        <Insets right="10.0"/>
+                                    </GridPane.margin>
+                                </TextField>
+                                <Label GridPane.columnIndex="1" GridPane.halignment="LEFT"
+                                       GridPane.rowIndex="3">KappaD
+                                </Label>
+                                <TextField fx:id="kappaDTextField" maxWidth="60"
+                                           GridPane.columnIndex="1" GridPane.halignment="RIGHT"
+                                           GridPane.rowIndex="3"/>
+                                <Button alignment="CENTER" mnemonicParsing="false"
+                                        onMouseClicked="#reloadByParameters" text="Przeładuj"
+                                        GridPane.columnIndex="1" GridPane.halignment="CENTER"/>
+                            </GridPane>
+                        </AnchorPane>
+                    </SplitPane>
+                </AnchorPane>
+            </SplitPane>
+        </StackPane>
+    </SplitPane>
+</AnchorPane>

@@ -4,9 +4,9 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<GridPane alignment="center" hgap="10" stylesheets="@../style/style.css" vgap="10"
+<GridPane alignment="center" hgap="10" stylesheets="@../../style/style.css" vgap="10"
           xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1"
-          fx:controller="sample.Controller.ControllerMainWindow">
+          fx:controller="sample.VirtualCamera.Controller.ControllerMainWindow">
     <SplitPane dividerPositions="0.75" orientation="VERTICAL" prefHeight="610.0" prefWidth="560.0">
         <StackPane id="mainPane" fx:id="mainPane"/>
 
