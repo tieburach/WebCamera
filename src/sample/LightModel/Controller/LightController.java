@@ -99,24 +99,24 @@ public class LightController {
 
     public void reloadByParameters() {
         try {
-            currentLight.getPhongModel().setIa(Double.parseDouble(IAmbientTextField.getText()));
-            currentLight.getPhongModel().setIi(Double.parseDouble(IhittingTextField.getText()));
-            currentLight.getPhongModel().setN(Double.parseDouble(shinenessTextField.getText()));
-            currentLight.getPhongModel().setKa(Double.parseDouble(kappaATextField.getText()));
-            currentLight.getPhongModel().setKd(Double.parseDouble(kappaDTextField.getText()));
-            currentLight.getPhongModel().setKs(Double.parseDouble(kappaSTextField.getText()));
+            currentLight.getPhongLight().setIa(Double.parseDouble(IAmbientTextField.getText()));
+            currentLight.getPhongLight().setIi(Double.parseDouble(IhittingTextField.getText()));
+            currentLight.getPhongLight().setN(Double.parseDouble(shinenessTextField.getText()));
+            currentLight.getPhongLight().setKa(Double.parseDouble(kappaATextField.getText()));
+            currentLight.getPhongLight().setKd(Double.parseDouble(kappaDTextField.getText()));
+            currentLight.getPhongLight().setKs(Double.parseDouble(kappaSTextField.getText()));
             currentPaint = new Paint(currentLight);
             initializeDrawing(currentPaint);
         }catch (Exception ignored){}
     }
 
     private void initializeTextFields() {
-        IAmbientTextField.setText("" + currentLight.getPhongModel().getIa());
-        IhittingTextField.setText("" + currentLight.getPhongModel().getIi());
-        shinenessTextField.setText("" + currentLight.getPhongModel().getN());
-        kappaATextField.setText("" + currentLight.getPhongModel().getKa());
-        kappaDTextField.setText("" + currentLight.getPhongModel().getKd());
-        kappaSTextField.setText("" + currentLight.getPhongModel().getKs());
+        IAmbientTextField.setText("" + currentLight.getPhongLight().getIa());
+        IhittingTextField.setText("" + currentLight.getPhongLight().getIi());
+        shinenessTextField.setText("" + currentLight.getPhongLight().getN());
+        kappaATextField.setText("" + currentLight.getPhongLight().getKa());
+        kappaDTextField.setText("" + currentLight.getPhongLight().getKd());
+        kappaSTextField.setText("" + currentLight.getPhongLight().getKs());
     }
 
 

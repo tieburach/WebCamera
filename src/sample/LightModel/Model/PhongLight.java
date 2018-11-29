@@ -1,7 +1,7 @@
 package sample.LightModel.Model;
 
 
-public class PhongModel {
+public class PhongLight {
 
     //specular intensity - natezenie swiatla odbijanego zwierciadlanie
     private double Ia;
@@ -14,7 +14,7 @@ public class PhongModel {
     private double n, c;
 
 
-    PhongModel(double ia, double Ka, double ii, double Kd, double Ks, double N, double C) {
+    PhongLight(double ia, double Ka, double ii, double Kd, double Ks, double N, double C) {
         Ia = ia;
         ka = Ka;
         Ii = ii;
@@ -24,7 +24,7 @@ public class PhongModel {
         c = C;
     }
 
-    PhongModel(){
+    PhongLight(){
         Ia = 100;
         ka =0.4;
         Ii = 60000 ;
@@ -37,9 +37,9 @@ public class PhongModel {
     Double spherePointLighting(Vector lightSource, Vector observer, Vector sphereCenter, Vector point) {
         if (point == null){
             return null;}
-        Vector N = new Vector(sphereCenter.x, point.x, sphereCenter.y, point.y, sphereCenter.z, point.z).toNormalizeVector();
-        Vector V = new Vector(point.x, observer.x, point.y, observer.y, point.z, observer.z).toNormalizeVector();
-        Vector L = new Vector(point.x, lightSource.x, point.y, lightSource.y, point.z, lightSource.z);
+        Vector N = new Vector(sphereCenter.getX(), point.getX(), sphereCenter.getY(), point.getY(), sphereCenter.getZ(), point.getZ()).toNormalizeVector();
+        Vector V = new Vector(point.getX(), observer.getX(), point.getY(), observer.getY(), point.getZ(), observer.getZ()).toNormalizeVector();
+        Vector L = new Vector(point.getX(), lightSource.getX(), point.getY(), lightSource.getY(), point.getZ(), lightSource.getZ());
         double r = L.normalization();
         L = L.toNormalizeVector();
         Vector R = (N.multiply(2)).multiply(N.scalarProduct(L)).subtract(L).toNormalizeVector();

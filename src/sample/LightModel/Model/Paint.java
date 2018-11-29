@@ -1,5 +1,7 @@
 package sample.LightModel.Model;
 
+import sample.LightModel.Controller.Logger;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -13,13 +15,12 @@ public class Paint extends JPanel {
 
     @Override
     protected void paintComponent(Graphics g) {
-
-        light.setLights();
+        light.calculateNewColors();
         long time1 = System.currentTimeMillis();
-        for (int y = 0; y < light.height; y++) {
-            for (int x = 0; x < light.width; x++) {
-                if (light.colors[y][x] != null) {
-                    g.setColor(light.colors[y][x]);
+        for (int y = 0; y < Constants.getHeight(); y++) {
+            for (int x = 0; x < Constants.getWidth(); x++) {
+                if (light.colorTab[y][x] != null) {
+                    g.setColor(light.colorTab[y][x]);
                     g.drawLine(x, y, x, y);
                 } else {
                     g.setColor(Color.white);
@@ -27,6 +28,6 @@ public class Paint extends JPanel {
                 }
             }
         }
-        System.out.println("PaintComponent trwa: " + (System.currentTimeMillis() - time1));
+        Logger.log("PaintComponent trwa: " + (System.currentTimeMillis() - time1));
     }
 }

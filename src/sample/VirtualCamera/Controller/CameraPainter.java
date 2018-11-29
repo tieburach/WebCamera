@@ -38,7 +38,6 @@ public class CameraPainter extends JPanel {
         for (Wall2D wall : virtualCamera.getWalls()) {
             if (LaunchType.isFirstProject()) {
                 g2D.setColor(Color.gray);
-
             } else {
                 g2D.setColor(Color.pink);
                 g2D.fillPolygon(wall.getWallXCoordinates(), wall.getWallYCoordinates(), 4);

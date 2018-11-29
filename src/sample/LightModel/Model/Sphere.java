@@ -17,23 +17,23 @@ class Sphere {
 
     //przeciecie sfery z prosta od kamery
     Vector getCrossPoint(Vector start, Vector end) {
-        double dx = end.x - start.x;
-        double dy = end.y - start.y;
-        double dz = end.z - start.z;
+        double dx = end.getX() - start.getX();
+        double dy = end.getY() - start.getY();
+        double dz = end.getZ() - start.getZ();
 
         double a = Math.pow(dx, 2) + Math.pow(dy, 2) + Math.pow(dz, 2);
-        double b = 2 * (dx * (start.x - this.x) + dy * (start.y - this.y) + dz * (start.z - this.z));
-        double c = Math.pow(start.x - this.x, 2) + Math.pow(start.y - this.y, 2) + Math.pow(start.z - this.z, 2) - Math.pow(this.r, 2);
+        double b = 2 * (dx * (start.getX() - this.x) + dy * (start.getY() - this.y) + dz * (start.getZ() - this.z));
+        double c = Math.pow(start.getX() - this.x, 2) + Math.pow(start.getY() - this.y, 2) + Math.pow(start.getZ() - this.z, 2) - Math.pow(this.r, 2);
         double delta = Math.pow(b, 2) - 4 * a * c;
 
         if(delta < 0) {
             return null;
         } else if( delta == 0) {
             double t = - b / 2 * a;
-            return new Vector(start.x + t * (end.x - start.x), start.y + t * (end.y - start.y), start.z + t * (end.z - start.z));
+            return new Vector(start.getX() + t * (end.getX() - start.getX()), start.getY() + t * (end.getY() - start.getY()), start.getZ() + t * (end.getZ() - start.getZ()));
         } else {
             double t = Math.min((-b - Math.sqrt(delta)) / (2 * a), (-b + Math.sqrt(delta)) / (2 * a));
-            return new Vector (start.x + t * (end.x - start.x), start.y + t * (end.y - start.y), start.z + t * (end.z - start.z));
+            return new Vector (start.getX() + t * (end.getX() - start.getX()), start.getY() + t * (end.getY() - start.getY()), start.getZ() + t * (end.getZ() - start.getZ()));
         }
     }
 }

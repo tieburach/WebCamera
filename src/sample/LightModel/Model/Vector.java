@@ -1,7 +1,8 @@
 package sample.LightModel.Model;
 
 public class Vector {
-    double x, y, z;
+
+    private double x, y, z;
 
     public Vector(double x, double y, double z) {
         this.x = x;
@@ -44,5 +45,29 @@ public class Vector {
                 ", y=" + y +
                 ", z=" + z +
                 "}. \n";
+    }
+
+    public double getX() {
+        return x;
+    }
+
+    public void setX(double x) {
+        this.x = x;
+    }
+
+    public double getY() {
+        return y;
+    }
+
+    public void setY(double y) {
+        this.y = y;
+    }
+
+    public double getZ() {
+        return z;
+    }
+
+    public void setZ(double z) {
+        this.z = z;
     }
 }

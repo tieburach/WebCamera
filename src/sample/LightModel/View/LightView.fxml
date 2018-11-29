@@ -74,7 +74,7 @@
                                          fx:id="xSpinner">
                                     <valueFactory>
                                         <SpinnerValueFactory.DoubleSpinnerValueFactory
-                                                amountToStepBy="1" initialValue="-3" max="10"
+                                                amountToStepBy="1" initialValue="-5" max="10"
                                                 min="-10"/>
                                     </valueFactory>
                                 </Spinner>
@@ -85,7 +85,7 @@
                                          GridPane.halignment="CENTER" GridPane.rowIndex="2">
                                     <valueFactory>
                                         <SpinnerValueFactory.DoubleSpinnerValueFactory
-                                                amountToStepBy="1" initialValue="3" max="10"
+                                                amountToStepBy="1" initialValue="5" max="10"
                                                 min="-10"/>
                                     </valueFactory>
                                 </Spinner>
@@ -95,7 +95,7 @@
                                          GridPane.halignment="CENTER" GridPane.rowIndex="3">
                                     <valueFactory>
                                         <SpinnerValueFactory.DoubleSpinnerValueFactory
-                                                amountToStepBy="1" initialValue="-7" max="10"
+                                                amountToStepBy="1" initialValue="-5" max="10"
                                                 min="-10"/>
                                     </valueFactory>
                                 </Spinner>
